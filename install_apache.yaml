@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install apache2 packages
+      apt :
+        name : apache2
+    
+    - name: install tree packages
+      apt :
+        name: tree
+        state : latest
+      
+    - name: install nginx 
+      apt :
+        name: nginx
+        state : latest
